@@ -9,7 +9,7 @@ services:
     volumes:
       - ./sparrow-data/ocr/:/ocr
     ports:
-      - "8001:80011"
+      - "8001:8001"
     runtime: nvidia  # Использование GPU runtime
     environment:
       - NVIDIA_VISIBLE_DEVICES=all  # Указываем все доступные GPU
