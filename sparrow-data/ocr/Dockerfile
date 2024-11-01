@@ -29,5 +29,5 @@ RUN apt-get update && apt-get install -y \
 RUN pip install --upgrade pip && \
     pip install --no-cache-dir -r requirements.txt
 
-CMD ["bash", "-c", "sleep infinity"]
-#CMD ["bash", "-c", "streamlit run tracker.py"]
+#CMD ["bash", "-c", "sleep infinity"]
+CMD ["bash", "-c", "python api.py"]
