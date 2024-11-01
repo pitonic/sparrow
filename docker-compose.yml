@@ -1,0 +1,15 @@
+
+services:
+  ocr:
+    build:
+      context: ./
+      dockerfile: sparrow-data/ocr/Dockerfile
+    container_name: ocr-container
+    working_dir: /
+    volumes:
+      - ./sparrow-data/ocr/:/ocr
+    ports:
+      - "5501:5501"
+    runtime: nvidia  # Использование GPU runtime
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all  # Указываем все доступные GPU
