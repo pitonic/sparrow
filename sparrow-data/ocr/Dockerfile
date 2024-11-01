@@ -3,6 +3,7 @@ FROM python:3.9-slim
 COPY ./sparrow-data/ocr/requirements.txt requirements.txt
 
 # Install system dependencies
+# Install system dependencies
 RUN apt-get update && apt-get install -y \
     libjpeg-dev \
     libpng-dev \
@@ -21,6 +22,7 @@ RUN apt-get update && apt-get install -y \
     libsm6 \
     libxext6 \
     libxrender-dev \
+    libpoppler-cpp-dev \
     && rm -rf /var/lib/apt/lists/*
 
 # Upgrade pip and install Python dependencies
