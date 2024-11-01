@@ -1,6 +1,6 @@
 FROM python:3.8-slim
 
-COPY ./requirements.txt requirements.txt
+COPY ./sparrow-data/ocr/requirements.txt requirements.txt
 
 RUN apt update && \
     apt install --no-install-recommends -y gcc && \
