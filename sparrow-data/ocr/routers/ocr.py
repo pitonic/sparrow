@@ -17,7 +17,7 @@ router = APIRouter()
 
 @lru_cache(maxsize=1)
 def load_ocr_model():
-    model = PaddleOCR(use_angle_cls=True, lang='en')
+    model = PaddleOCR(use_angle_cls=True, lang='ru','en')
     return model
 
 
